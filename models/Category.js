@@ -34,5 +34,5 @@ Category.init(
   }
 );
 
-//Export Category
+//Export Category Model
 module.exports = Category;
