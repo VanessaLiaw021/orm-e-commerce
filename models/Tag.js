@@ -12,14 +12,24 @@ Tag.init (
   {
     //Create a id field for Tag model
     id: {
+
+      //Set the id as a Integer
       type: DataTypes.INTEGER,
+
+      //Do not allow null values
       allowNull: false,
+
+      //Allow auto increment
       autoIncrement: true,
+
+      //Primary key as id
       primaryKey: true
     },
 
     //Create a tag name field for Tag Model
     tag_name: {
+
+      //Set the tag_name as String
       type: DataTypes.STRING
     }
   },
