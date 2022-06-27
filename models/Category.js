@@ -12,15 +12,27 @@ Category.init (
   {
     //Create a id field for category
     id: {
+
+      //Set ID as Integer
       type: DataTypes.INTEGER,
+
+      //Do not allow null values
       allowNull: false,
+
+      //Allow auto increment
       autoIncrement: true,
+
+      //Primary key is id 
       primaryKey: true
     },
 
     //Create a category name field for category 
     category_name: {
+
+      //Set category_name as a String
       type: DataTypes.STRING,
+
+      //Do not allow null values
       allowNull: false
     }
   },
