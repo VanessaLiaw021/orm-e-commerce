@@ -18,9 +18,22 @@ ProductTag.init (
       primaryKey: true
     },
 
-    //Create a tag name field for ProductTag Model
-    tag_name: {
-      type: DataTypes.STRING
+    //Create a product id field for ProductTag Model
+    product_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: "product",
+        key: "id"
+      }
+    },
+
+    //Create a tag id field for ProductTag model
+    tag_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: "tag",
+        key: "id"
+      }
     }
   },
   {
