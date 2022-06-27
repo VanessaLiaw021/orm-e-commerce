@@ -12,15 +12,27 @@ ProductTag.init (
   {
     //Create a id field for ProductTag model
     id: {
+
+      //Set the id as a Integer
       type: DataTypes.INTEGER,
+
+      //Do not allow null values
       allowNull: false,
+
+      //Allow auto increment 
       autoIncrement: true,
+
+      //Primary key as id
       primaryKey: true
     },
 
     //Create a product id field for ProductTag Model
     product_id: {
+
+      //Set the product_id as a Integer
       type: DataTypes.INTEGER,
+
+      //Reference the product id's as foreign key 
       references: {
         model: "product",
         key: "id"

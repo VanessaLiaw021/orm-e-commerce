@@ -19,7 +19,7 @@ Product.init (
       //Do not allow null values
       allowNull: false,
 
-      //Auto Increment the id's
+       //Allow auto increment
       autoIncrement: true,
 
       //Primary key is the id
