@@ -9,7 +9,7 @@ class Category extends Model {}
 Category.init(
   {
     //Create a id table for category
-    category_id: {
+    id: {
       type: DataTypes.INTEGER,
       allowNull: false,
       autoIncrement: true,
