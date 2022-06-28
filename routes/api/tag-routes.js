@@ -90,6 +90,13 @@ router.put('/:id', async (req, res) => {
       }
     );
 
+    //Validate that the deleted id exist, if not display the error message
+    if (!updateTag) {
+
+      //Display error message
+      res.json({ message: "No such tag with the following id exist!" });
+    }; 
+
     //Return the tag data in a json file
     res.json(updateTag);
 
@@ -109,6 +116,13 @@ router.delete('/:id', async (req, res) => {
 
     //Delete a tag name in Tag model
     const deleteTag = await Tag.destroy(req.body);
+
+    //Validate that the deleted id exist, if not display the error message
+    if (!deleteTag) {
+
+      //Display error message
+      res.json({ message: "No such tag with the following id exist!" });
+    };
 
     //Return the tag data in a json file
     res.json(deleteTag);
