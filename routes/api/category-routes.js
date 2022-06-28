@@ -119,7 +119,7 @@ router.delete('/:id', async (req, res) => {
 
     //Display error if exist
     res.json(err);
-  }
+  };
 });
 
 //Export Category routers
