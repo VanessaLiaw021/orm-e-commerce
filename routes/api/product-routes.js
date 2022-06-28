@@ -136,12 +136,12 @@ router.delete('/:id', async (req, res) => {
       where: { id: req.params.id }
     });
 
-    //Validate that the delete id exist, if not display en error message
+    //Validate that the deleted id exist, if not display en error message
     if (!deleteProduct) {
 
       //Display error message when the id does not exist
       res.json({ message: "No such product with the following id exist!" });
-    }
+    };
 
     //Return the product data in a json file
     res.json(deleteProduct);

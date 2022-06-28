@@ -1,6 +1,7 @@
 //Import require packages and models
 const router = require('express').Router();
 const { Category, Product } = require('../../models');
+const { update } = require('../../models/Product');
 
 // The `/api/categories` endpoint
 
@@ -88,6 +89,13 @@ router.put('/:id', async (req, res) => {
       }
     );
 
+    //Validate that the updated id exist, if not display the error message
+    if (!updateCategory) {
+
+      //Display error message if id does not exist
+      res.json({ message: "No such category with the following id exist!" });
+    };
+
     //Return the category data in a json file
     res.json(updateCategory);
 
@@ -109,6 +117,13 @@ router.delete('/:id', async (req, res) => {
     const deleteCategory = await Category.destroy({
       where: { id: req.params.id }
     });
+
+    //Validate that the deleted id exist, if not display the error message
+    if (!deleteCategory) {
+
+      //Display error message
+      res.json({ message: "No such category with the following id exist!" });
+    };
 
     //Return the category data in a json file
     res.json(deleteCategory);
