@@ -17,9 +17,9 @@ Product.init (
       type: DataTypes.INTEGER,
 
       //Do not allow null values
-      allowNull: false,
+      notNull: true,
 
-       //Allow auto increment
+      //Allow auto increment
       autoIncrement: true,
 
       //Primary key is the id
@@ -33,7 +33,7 @@ Product.init (
       type: DataTypes.STRING,
 
       //Do not allow null values
-      allowNull: false
+      notNull: true
     },
 
     //Create a price field for Product model 
@@ -43,7 +43,7 @@ Product.init (
       type: DataTypes.DECIMAL, 
 
       //Do not allow null values
-      allowNull: false,
+      notNull: true,
 
       //Validate that value is a decimal
       validate: {
@@ -61,7 +61,7 @@ Product.init (
       defaultValue: 10,
 
       //Do not allow null values
-      allowNull: false,
+      notNull: true,
 
       //Validate that value is a number
       validate: {
