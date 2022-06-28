@@ -10,7 +10,7 @@ router.get('/', async (req, res) => {
   //Try to run the code inside
   try {
 
-    //Get all the tags in the Tag model
+    //Get all the tags in Tag model
     const tagsData = await Tag.findAll({
 
       //Include the Product model and ProductTag model when display all Tags
@@ -34,7 +34,7 @@ router.get('/:id', async (req, res) => {
   //Try to run the code inside
   try {
 
-    //Get a tag by primary key 
+    //Get a tag by primary key in Tag model
     const tagData = await Tag.findByPk({
 
       //Include the Product model and ProductTag model when display all Tags
@@ -58,7 +58,7 @@ router.post('/', async (req, res) => {
   //Try to run the code inside
   try {
 
-    //Create a new tag 
+    //Create a new tag in Tag model
     const createTag = await Tag.create({
         tag_name: req.body.tag_name
     });
@@ -74,8 +74,31 @@ router.post('/', async (req, res) => {
   };
 });
 
-router.put('/:id', (req, res) => {
-  // update a tag's name by its `id` value
+//PUT method to update a tag name
+router.put('/:id', async (req, res) => {
+  
+  //Try to run the code inside 
+  try {
+
+    //Update a tag name in Tag model
+    const updateTag = await Tag.update(
+      {
+        tag_name: req.body.tag_name
+      },
+      {
+        where: { id: req.params.id}
+      }
+    );
+
+    //Return the tag data in a json file
+    res.json(updateTag);
+
+    //Catch any error if any
+  } catch (err) {
+
+    //Display error if it exist
+    res.json(err);
+  };
 });
 
 router.delete('/:id', (req, res) => {
