@@ -17,7 +17,7 @@ Tag.init (
       type: DataTypes.INTEGER,
 
       //Do not allow null values
-      notNull: true,
+      allowNull: true,
 
       //Allow auto increment
       autoIncrement: true,
