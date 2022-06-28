@@ -51,7 +51,7 @@ router.get('/:id', async (req, res) => {
   }
 });
 
-// create new product
+//POST method to create a new product
 router.post('/', (req, res) => {
   /* req.body should look like this...
     {
@@ -125,8 +125,27 @@ router.put('/:id', (req, res) => {
     });
 });
 
-router.delete('/:id', (req, res) => {
-  // delete one product by its `id` value
+//DELETE method to delete a product
+router.delete('/:id', async (req, res) => {
+  
+  //Try to run the code inside
+  try {
+
+    //Delete a product 
+    const deleteProduct = await Product.destroy({
+      where: { id: req.params.id }
+    });
+
+    //Return the product data in a json file
+    res.json(deleteProduct);
+
+    //Catch error if any
+  } catch (err) {
+
+    //Display error if exist
+    res.json(err);
+  };
 });
 
+//Export Product Routes
 module.exports = router;
