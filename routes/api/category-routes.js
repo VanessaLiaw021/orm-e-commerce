@@ -1,5 +1,7 @@
+//Import require packages and models
 const router = require('express').Router();
 const { Category, Product } = require('../../models');
+const { create } = require('../../models/Product');
 
 // The `/api/categories` endpoint
 
@@ -51,8 +53,24 @@ router.get('/:id', async (req, res) => {
   }
 });
 
-router.post('/', (req, res) => {
-  // create a new category
+//POST method to create a new category
+router.post('/', async (req, res) => {
+
+  //Try to run the code inside 
+  try {
+
+    //Create a new category in Category model
+    const createCategory = await Category.create();
+
+    //Return the category data in a json file 
+    res.json(createCategory);
+
+    //Catch any error if any
+  } catch (err) {
+
+    //Display error if exist
+    res.json(err);
+  }
 });
 
 router.put('/:id', (req, res) => {
@@ -63,4 +81,5 @@ router.delete('/:id', (req, res) => {
   // delete a category by its `id` value
 });
 
+//Export Category routers
 module.exports = router;
