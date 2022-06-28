@@ -17,7 +17,7 @@ ProductTag.init (
       type: DataTypes.INTEGER,
 
       //Do not allow null values
-      allowNull: false,
+      notNull: true,
 
       //Allow auto increment 
       autoIncrement: true,
@@ -41,7 +41,11 @@ ProductTag.init (
 
     //Create a tag id field for ProductTag model
     tag_id: {
+
+      //Set the tag_id as a Integer
       type: DataTypes.INTEGER,
+
+      //Refrence the product id's as foreign key
       references: {
         model: "tag",
         key: "id"
