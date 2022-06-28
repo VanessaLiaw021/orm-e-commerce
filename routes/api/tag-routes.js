@@ -5,8 +5,6 @@ const { Tag, Product, ProductTag } = require('../../models');
 
 //GET method to get all tags
 router.get('/', async (req, res) => {
-  // find all tags
-  // be sure to include its associated Product data
 
   //Try to run the code inside
   try {
@@ -29,9 +27,30 @@ router.get('/', async (req, res) => {
   };
 });
 
-router.get('/:id', (req, res) => {
+//GET method to get a tag
+router.get('/:id', async (req, res) => {
   // find a single tag by its `id`
   // be sure to include its associated Product data
+
+  //Try to run the code inside
+  try {
+
+    //Get a tag by primary key 
+    const tagData = await Tag.findByPk({
+
+      //Include the Product model and ProductTag model when display all Tags
+      include: [Product, ProductTag]
+    });
+
+    //Return the tags data in a json file
+    res.json(tagData);
+
+    //Catch any error if any
+  } catch (err) {
+
+    //Display error if it exist
+    res.json(err);
+  };
 });
 
 router.post('/', (req, res) => {
