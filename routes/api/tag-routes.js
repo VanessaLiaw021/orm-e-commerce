@@ -101,8 +101,24 @@ router.put('/:id', async (req, res) => {
   };
 });
 
-router.delete('/:id', (req, res) => {
-  // delete on tag by its `id` value
+//DELETE method to delete a tag name
+router.delete('/:id', async (req, res) => {
+  
+  //Try to run the code inside
+  try {
+
+    //Delete a tag name in Tag model
+    const deleteTag = await Tag.destroy(req.body);
+
+    //Return the tag data in a json file
+    res.json(deleteTag);
+
+    //Catch any error if any
+  } catch (err) {
+
+    //Display error if it exist
+    res.json(err);
+  };
 });
 
 //Export Tags Routes
