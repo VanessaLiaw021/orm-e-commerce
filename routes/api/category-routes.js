@@ -1,7 +1,6 @@
 //Import require packages and models
 const router = require('express').Router();
 const { Category, Product } = require('../../models');
-const { create } = require('../../models/Product');
 
 // The `/api/categories` endpoint
 
@@ -60,7 +59,7 @@ router.post('/', async (req, res) => {
   try {
 
     //Create a new category in Category model
-    const createCategory = await Category.create();
+    const createCategory = await Category.create(req.body);
 
     //Return the category data in a json file 
     res.json(createCategory);
