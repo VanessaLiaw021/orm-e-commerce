@@ -34,7 +34,7 @@ router.get('/:id', async (req, res) => {
   try {
 
     //Get a tag by primary key in Tag model
-    const tagData = await Tag.findByPk({
+    const tagData = await Tag.findByPk(req.params.id, {
 
       //Include the Product model and ProductTag model when display all Tags
       include: [{ model: Product }]
