@@ -12,9 +12,9 @@ router.get('/', async (req, res) => {
 
     //Find all the categories in the Category model 
     const categoriesData = await Category.findAll({
-
+      
       //Include the Product model when displaying the Category model
-      include: [Product]
+      include: [{ model: Product }]
     });
 
     //Return the categories data in a json file
@@ -38,7 +38,7 @@ router.get('/:id', async (req, res) => {
     const categoryData = await Category.findByPk(req.params.id, {
 
       //Include the Product model when displaying the Category model
-      include: [Product]
+      include: [{ model: Product }]
     });
 
     //Return the category data in a json file

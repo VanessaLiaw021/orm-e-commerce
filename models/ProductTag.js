@@ -17,7 +17,7 @@ ProductTag.init (
       type: DataTypes.INTEGER,
 
       //Do not allow null values
-      allowNull: true,
+      allowNull: false,
 
       //Allow auto increment 
       autoIncrement: true,
