@@ -114,7 +114,9 @@ router.delete('/:id', async (req, res) => {
   try {
 
     //Delete a tag name in Tag model
-    const deleteTag = await Tag.destroy(req.body);
+    const deleteTag = await Tag.destroy({
+      where: { id: req.params.id }
+    });
 
     //Validate that the deleted id exist, if not display the error message
     if (!deleteTag) {
