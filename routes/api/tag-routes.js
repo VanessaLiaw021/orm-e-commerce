@@ -23,7 +23,7 @@ router.get('/', async (req, res) => {
   } catch (err) {
 
     //Display error if it exist
-    req.json(err);
+    res.json(err);
   };
 });
 
