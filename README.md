@@ -54,6 +54,10 @@ npm i sequelize
 
 ## Visuals
 
+Here is a sample of what should appear in Insonmia Core if you following all the direction and installation
+
+![What should appear in Insonmia](./images/example.png)
+
 ## Resources
 
 - [GitHub Repo](https://github.com/VanessaLiaw021/orm-e-commerce)
@@ -65,7 +69,7 @@ DEMO: Insonmia Core, GET a Single Category, GET a Single Product, Get A Single T
 - [Demo GET A Single item from the Model](https://drive.google.com/file/d/1380A7bSV2dyNcB7L8_G-mqRnYhCiukOH/view)
 
 DEMO: Insonmia Core, POST, UPDATE, DELETE Operation for Category, Product, and Tag
-- [Demo POST, UPDATEm DELETE for all Model](https://drive.google.com/file/d/19eZlJFSkZlupMYs9Hd4edXDGQTgoTnlX/view)
+- [Demo POST, UPDATE, DELETE for all Model](https://drive.google.com/file/d/19eZlJFSkZlupMYs9Hd4edXDGQTgoTnlX/view)
 
 ## Authors and Acknowledgement
 
