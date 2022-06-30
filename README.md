@@ -2,12 +2,12 @@
 
 ## Table of Content
 
--[Description](#description)
--[Usage](#usage)
--[Installation](#installation)
--[Visuals](#visuals)
--[Resources](#resources)
--[Authors and Acknowledgement](#authors-and-acknowledgement)
+- [Description](#description)
+- [Usage](#usage)
+- [Installation](#installation)
+- [Visuals](#visuals)
+- [Resources](#resources)
+- [Authors and Acknowledgement](#authors-and-acknowledgement)
 
 ## Description 
 
