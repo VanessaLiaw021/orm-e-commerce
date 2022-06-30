@@ -34,7 +34,7 @@ Since all the dependencies/packages are listed in the package.json, you can just
 npm i
 ```
 
-If you prefer downloading/packages each package one by one, these are the command for it 
+If you prefer downloading each dependencies/packages one by one, these are the command for it 
 
 ```
 npm i dotenv
@@ -58,17 +58,14 @@ npm i sequelize
 
 - [GitHub Repo](https://github.com/VanessaLiaw021/orm-e-commerce)
 
-DEMO: How to create the schema from the MySQL shell and How to seed the database 
-- [Demo-SQL-Command]()
-
-DEMO: Insonmia Core, GET all Categories, GET all Product, GET all Tags
-- [Demo-All-Model]()
+DEMO: Insonmia Core to Create Schema and Seed in the Database, GET all Categories, GET all Product, GET all Tags
+- [Demo SQL Command and GET ALL item from the Models](https://drive.google.com/file/d/1gbKkaU0ElmWFYYqW9spYSspka1ZYKwPH/view)
 
 DEMO: Insonmia Core, GET a Single Category, GET a Single Product, Get A Single Tag
-- [Demo-Single-Model]()
+- [Demo GET A Single item from the Model](https://drive.google.com/file/d/1380A7bSV2dyNcB7L8_G-mqRnYhCiukOH/view)
 
 DEMO: Insonmia Core, POST, UPDATE, DELETE Operation for Category, Product, and Tag
-- [Demo-POST-UPDATE-DELETE-Model]()
+- [Demo POST, UPDATEm DELETE for all Model](https://drive.google.com/file/d/19eZlJFSkZlupMYs9Hd4edXDGQTgoTnlX/view)
 
 ## Authors and Acknowledgement
 
